@@ -1,14 +1,10 @@
 [
   {
-    "name": "ian1",
+    "name": "a",
     "age": 18
   },
   {
-    "name": "ian2",
+    "name": "b",
     "age": 22
-  },
-  {
-    "name": "ian3",
-    "age": 23
   }
 ]

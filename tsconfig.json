@@ -1,26 +1,23 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
-    "allowJs": true,
-    "skipLibCheck": true,
+    "target": "es2016", // 指定ECMAScript目标版本
     "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
+    "module": "commonjs",
     "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true,
-    "module": "esnext",
-    "moduleResolution": "node",
+    "strict": true,
+    "skipLibCheck": true,
     "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react-jsx"
+    "allowJs": false, // 允许编辑js文件
+    "noEmit": true, // 不生成输出文件
+    "noImplicitAny": false,
+    "experimentalDecorators": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "typeRoots": ["./typings/*.d.ts", "node_modules/@types"],
+    "jsx": "react-jsx" // react18这里改成react-jsx，就不需要在tsx文件中手动引入React了
   },
-  "include": [
-    "src"
-  ]
+  "include": ["./src/*", "./src/**/*.ts", "./src/**/*.tsx", "./typings/*.d.ts"],
+  "exclude": ["node_modules", "dist"]
 }
